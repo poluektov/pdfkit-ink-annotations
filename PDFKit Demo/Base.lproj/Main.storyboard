@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gbz-N9-JzO">
+    <device id="ipad11_0rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PDFKit Demo-->
+        <scene sceneID="tky-db-lCJ">
+            <objects>
+                <viewController id="cEK-mX-Pw3" customClass="DocumentDrawingViewController" customModule="PDFKit_Demo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3aU-Gl-jpX">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oJp-vO-ysx" customClass="NonSelectablePDFView" customModule="PDFKit_Demo" customModuleProvider="target">
+                                <rect key="frame" x="132" y="74" width="702" height="1099.5"/>
+                                <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zza-gt-RqN" userLabel="Thumbnail View Container">
+                                <rect key="frame" x="0.0" y="74" width="132" height="1100"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yaf-Ec-GOs" customClass="PDFThumbnailView">
+                                        <rect key="frame" x="0.0" y="0.0" width="132" height="1100"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yb3-Jz-Tam" userLabel="V Separator">
+                                        <rect key="frame" x="131.5" y="0.0" width="0.5" height="1100"/>
+                                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23000000000000001" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="0.5" id="gUk-zT-St5"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.90588235294117647" green="0.90196078431372551" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="yb3-Jz-Tam" firstAttribute="top" secondItem="Zza-gt-RqN" secondAttribute="top" id="BQ5-ep-cD1"/>
+                                    <constraint firstAttribute="trailing" secondItem="yb3-Jz-Tam" secondAttribute="trailing" id="Ca8-WD-LS9"/>
+                                    <constraint firstAttribute="bottom" secondItem="Yaf-Ec-GOs" secondAttribute="bottom" id="FN7-3l-pq2"/>
+                                    <constraint firstItem="Yaf-Ec-GOs" firstAttribute="top" secondItem="Zza-gt-RqN" secondAttribute="top" id="SbV-eV-uGc"/>
+                                    <constraint firstItem="Yaf-Ec-GOs" firstAttribute="leading" secondItem="Zza-gt-RqN" secondAttribute="leading" id="UO7-Xu-yO1"/>
+                                    <constraint firstAttribute="trailing" secondItem="Yaf-Ec-GOs" secondAttribute="trailing" id="gPK-5z-r8o"/>
+                                    <constraint firstAttribute="width" constant="132" id="mAW-qI-DT2"/>
+                                    <constraint firstAttribute="bottom" secondItem="yb3-Jz-Tam" secondAttribute="bottom" id="yFO-Tw-KOK"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3r-nN-e1Q" userLabel="H Separator Bottom">
+                                <rect key="frame" x="0.0" y="1173.5" width="834" height="0.5"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.23000000000000001" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="0.5" id="Ule-mx-XTp"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="oJp-vO-ysx" firstAttribute="trailing" secondItem="6v5-0n-a0s" secondAttribute="trailing" id="E9B-Ut-8d7"/>
+                            <constraint firstItem="i3r-nN-e1Q" firstAttribute="leading" secondItem="3aU-Gl-jpX" secondAttribute="leading" id="KTg-ec-VPG"/>
+                            <constraint firstItem="Zza-gt-RqN" firstAttribute="leading" secondItem="6v5-0n-a0s" secondAttribute="leading" id="P74-yZ-hZf"/>
+                            <constraint firstItem="6v5-0n-a0s" firstAttribute="bottom" secondItem="Zza-gt-RqN" secondAttribute="bottom" id="XRA-03-a82"/>
+                            <constraint firstItem="oJp-vO-ysx" firstAttribute="leading" secondItem="Zza-gt-RqN" secondAttribute="trailing" id="XmO-C6-xlU"/>
+                            <constraint firstAttribute="trailing" secondItem="i3r-nN-e1Q" secondAttribute="trailing" id="ZUl-xr-mQb"/>
+                            <constraint firstItem="i3r-nN-e1Q" firstAttribute="top" secondItem="oJp-vO-ysx" secondAttribute="bottom" id="a8N-l8-6p7"/>
+                            <constraint firstItem="oJp-vO-ysx" firstAttribute="top" secondItem="6v5-0n-a0s" secondAttribute="top" id="jwO-gD-Vs9"/>
+                            <constraint firstItem="6v5-0n-a0s" firstAttribute="bottom" secondItem="i3r-nN-e1Q" secondAttribute="bottom" id="p4a-pW-rbo"/>
+                            <constraint firstItem="Zza-gt-RqN" firstAttribute="top" secondItem="6v5-0n-a0s" secondAttribute="top" id="u33-V0-Mo8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6v5-0n-a0s"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="PDFKit Demo" largeTitleDisplayMode="never" id="AlW-Nv-olg"/>
+                    <connections>
+                        <outlet property="pdfView" destination="oJp-vO-ysx" id="7lg-ux-gpf"/>
+                        <outlet property="thumbnailView" destination="Yaf-Ec-GOs" id="Xmd-SC-grP"/>
+                        <outlet property="thumbnailViewContainer" destination="Zza-gt-RqN" id="lqw-DA-fzq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xod-9J-q22" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1992" y="102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="nmg-MS-1pV">
+            <objects>
+                <navigationController storyboardIdentifier="mainNC" id="gbz-N9-JzO" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="cy3-u5-w1C">
+                        <rect key="frame" x="0.0" y="24" width="834" height="102"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="cEK-mX-Pw3" kind="relationship" relationship="rootViewController" id="UMX-2k-UrQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFu-7N-FgF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="102"/>
+        </scene>
+    </scenes>
+</document>
