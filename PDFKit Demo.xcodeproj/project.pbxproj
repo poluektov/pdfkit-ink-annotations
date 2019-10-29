@@ -11,6 +11,7 @@
 		221A0110220B330900978618 /* PDFAnnotationWithPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A010F220B330900978618 /* PDFAnnotationWithPath.swift */; };
 		221A0112220B353300978618 /* PDFPage+Selection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221A0111220B353300978618 /* PDFPage+Selection.swift */; };
 		2223D14E223FC6BF003C225A /* 241_introducing_pdfkit_on_ios.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2223D14D223FC6BF003C225A /* 241_introducing_pdfkit_on_ios.pdf */; };
+		2225AE4D2368450200FE0F12 /* UIBezierPath+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2225AE4C2368450200FE0F12 /* UIBezierPath+.swift */; };
 		2236178121F7319400D081B0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236178021F7319400D081B0 /* AppDelegate.swift */; };
 		2236178321F7319400D081B0 /* DocumentDrawingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236178221F7319400D081B0 /* DocumentDrawingViewController.swift */; };
 		2236178621F7319400D081B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2236178421F7319400D081B0 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		221A010F220B330900978618 /* PDFAnnotationWithPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFAnnotationWithPath.swift; sourceTree = "<group>"; };
 		221A0111220B353300978618 /* PDFPage+Selection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PDFPage+Selection.swift"; sourceTree = "<group>"; };
 		2223D14D223FC6BF003C225A /* 241_introducing_pdfkit_on_ios.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 241_introducing_pdfkit_on_ios.pdf; sourceTree = "<group>"; };
+		2225AE4C2368450200FE0F12 /* UIBezierPath+.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+.swift"; sourceTree = "<group>"; };
 		2236177D21F7319400D081B0 /* PDFKit Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PDFKit Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2236178021F7319400D081B0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2236178221F7319400D081B0 /* DocumentDrawingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentDrawingViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		22BDF7E322033DD000AD6743 /* Drawing */ = {
 			isa = PBXGroup;
 			children = (
+				2225AE4C2368450200FE0F12 /* UIBezierPath+.swift */,
 				22A8802A2200E760001D527A /* DrawingGestureRecognizer.swift */,
 				22BDF7DF220334D800AD6743 /* PDFDrawer.swift */,
 				22BDF7E122033DC900AD6743 /* DrawingAnnotation.swift */,
@@ -180,6 +183,7 @@
 			files = (
 				221A010E220B322400978618 /* NonSelectablePDFView.swift in Sources */,
 				2236178321F7319400D081B0 /* DocumentDrawingViewController.swift in Sources */,
+				2225AE4D2368450200FE0F12 /* UIBezierPath+.swift in Sources */,
 				221A0112220B353300978618 /* PDFPage+Selection.swift in Sources */,
 				22BDF7E0220334D800AD6743 /* PDFDrawer.swift in Sources */,
 				2236178121F7319400D081B0 /* AppDelegate.swift in Sources */,

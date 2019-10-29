@@ -19,7 +19,7 @@ class DrawingGestureRecognizer: UIGestureRecognizer {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first,
-//            touch.type == .pencil, // Comment this line to test on simulator without Apple Pencil
+            touch.type == .pencil, // Comment this line to test on simulator without Apple Pencil
             let numberOfTouches = event?.allTouches?.count,
             numberOfTouches == 1 {
             state = .began

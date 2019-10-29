@@ -12,10 +12,6 @@ import PDFKit
 class DrawingAnnotation: PDFAnnotation {
     public var path = UIBezierPath()
     
-    func completed() {
-        add(path)
-    }
-    
     override func draw(with box: PDFDisplayBox, in context: CGContext) {
         let pathCopy = path.copy() as! UIBezierPath
         UIGraphicsPushContext(context)
