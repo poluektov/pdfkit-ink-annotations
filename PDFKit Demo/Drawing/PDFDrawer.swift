@@ -60,6 +60,8 @@ extension PDFDrawer: DrawingGestureRecognizerDelegate {
         guard let page = currentPage else { return }
         let convertedPoint = pdfView.convert(location, to: page)
         
+        print(convertedPoint)
+        
         if drawingTool == .eraser {
             removeAnnotationAtPoint(point: convertedPoint, page: page)
             return
@@ -88,7 +90,7 @@ extension PDFDrawer: DrawingGestureRecognizerDelegate {
         
         // Final annotation
         page.removeAnnotation(currentAnnotation!)
-        let finalAnnoattion = createFinalAnnotation(path: path!, page: page)
+        let finalAnnotation = createFinalAnnotation(path: path!, page: page)
         currentAnnotation = nil
     }
     

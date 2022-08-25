@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DrawingGestureRecognizerDelegate: class {
+protocol DrawingGestureRecognizerDelegate: AnyObject {
     func gestureRecognizerBegan(_ location: CGPoint)
     func gestureRecognizerMoved(_ location: CGPoint)
     func gestureRecognizerEnded(_ location: CGPoint)
@@ -19,7 +19,7 @@ class DrawingGestureRecognizer: UIGestureRecognizer {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first,
-            touch.type == .pencil, // Comment this line to test on simulator without Apple Pencil
+            // touch.type == .pencil, // Uncomment this line to test on device with Apple Pencil
             let numberOfTouches = event?.allTouches?.count,
             numberOfTouches == 1 {
             state = .began

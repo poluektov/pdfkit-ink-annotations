@@ -20,8 +20,10 @@ class DocumentDrawingViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+                
         setupPDFView()
+        
+        navigationController?.isToolbarHidden = false
         
         let pdfDrawingGestureRecognizer = DrawingGestureRecognizer()
         pdfView.addGestureRecognizer(pdfDrawingGestureRecognizer)
@@ -44,6 +46,17 @@ class DocumentDrawingViewController: UIViewController {
         thumbnailView.thumbnailSize = CGSize(width: 100, height: 100)
         thumbnailView.layoutMode = .vertical
         thumbnailView.backgroundColor = thumbnailViewContainer.backgroundColor
+    }
+    
+    // This is to change Drawing tool
+    @IBAction func changeDrawingTool(sender: UIBarButtonItem) {
+        // In this demo app we have all drawing controls on a Toolbar, each Toolbar item has its tag, see DrawitgTool enum for details
+        toolbarItems?.forEach({ item in
+            item.style = .plain
+        })
+        
+        sender.style = .done
+        pdfDrawer.drawingTool = DrawingTool(rawValue: sender.tag)!
     }
     
     // This code is required to fix PDFView Scroll Position when NOT using pdfView.usePageViewController(true)
